@@ -1,0 +1,32 @@
+
+  <div *ngIf="!isDataAvailable" class="applicationStartingLoader loaderSettings">
+    <h1 class="applicationPurpleColor" style="color: #6639b6">Loading Tables</h1>
+    <img src="./assets/img/loader.gif" style="width:150px;">
+  </div>
+
+  <div *ngIf="isDataAvailable" class="row" style="cursor: default">
+    <div class="col-md-12">
+      <div class="card card-plain">
+        <div class="header">
+          <h4 class="title">{{tableName}}</h4>
+          <p class="category">Advanced Data Table</p>
+        </div>
+        <div class="content  table-full-width">
+          <table *ngIf="isDataAvailable" style="margin-top: 50px;"  datatable  class="table row-border hover">
+            <thead>
+            <tr>
+              <th *ngFor="let cell of tableData.headerRow">{{ cell.Value }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let row of tableData.dataRows">
+              <td *ngFor="let cell of row">{{cell.Value}}</td>
+            </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+

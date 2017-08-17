@@ -1,0 +1,84 @@
+/** Nav bar styles **/
+
+@import "./../styles/variables.scss";
+
+/** Navbar settings **/
+.navBarWidth{
+  width:95% !important;
+}
+
+.navBarHeight{
+  min-height: 80px !important;
+  border-color:$nav-bar-color !important;
+}
+
+.navBarMarginSetting{
+  margin-top: 20px
+}
+
+.navBarBackground{
+  background-color: $nav-bar-color !important;
+}
+
+@mixin navBarTextFont($color, $fontSize, $fontWeight, $marginTop){
+  color: $color !important;
+  font-size: $fontSize !important;
+  font-family: sans-serif !important;
+  font-weight:$fontWeight;
+  margin-top: $marginTop;
+}
+
+.navBarTextFontColor{
+  @include navBarTextFont($nav-bar-text-color, large, 500, 20px);
+}
+
+.navBarHeaderFontColor{
+  @include navBarTextFont($nav-bar-text-color, xx-large, 700, 15px);
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus ,
+.navbar-default .navbar-nav  {
+  li{
+    a{
+      color: $nav-bar-text-color !important;
+    }
+  }
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: $nav-bar-text-color !important;
+  background-color: $nav-bar-background-color !important;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: $nav-bar-background-color !important;
+}
+
+
+/** Home page styles **/
+
+.customButtonFlat{
+  border: none;
+  border-radius: 32px !important;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: none !important;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.col-centered{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+}
+

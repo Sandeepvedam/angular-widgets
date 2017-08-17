@@ -1,0 +1,27 @@
+<div class="widgetsContainer">
+  <h3 class="chartHeading">Widgets</h3>
+
+    <dashboard (onOrderChange)="logOrder($event)" (onDragStart)="log($event, 'ondragstart')"
+               (onDragEnd)="log($event, 'ondragend')"
+               (onDrag)="log($event, 'ondragmove')" class="dashboard" [widgetsSize]="widgetsSize"
+               [margin]="dashboardMargin">
+
+      <widget [size]="[4,3]" widgetId="big" class="handle">
+        <data-table >
+        </data-table>
+      </widget>
+
+    <widget [size]="[2, 1]" widgetHandle widgetId="large" class="handle">
+      <div>Large widget [2, 1] handle only on this text
+        All other stuff...
+      </div>
+
+    </widget>
+
+      </dashboard>
+
+  </div>
+
+
+
+

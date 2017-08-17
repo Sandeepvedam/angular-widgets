@@ -1,0 +1,146 @@
+
+@import "./../../styles/variables.scss";
+
+$custom-button-width: 250px;
+$custom-button-radius: 25px;
+$custom-button-margin-top: 25px;
+
+.widgetsContainer{
+  background-color:white;
+  padding: 20px;
+  display: block;
+  margin: 8px;
+}
+
+.md2-text{
+  font-size: 16px;
+}
+
+.card [data-background-color] {
+
+  color: #FFFFFF;
+
+}
+
+@mixin mixinCard($box-shadow, $margin, $border-radius, $background-color, $padding){
+  box-shadow: $box-shadow;
+  margin: $margin;
+  border-radius: $border-radius;
+  background-color: $background-color;
+  padding: $padding;
+}
+
+.card {
+
+  box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);
+
+}
+
+.card .card-header {
+
+  @include mixinCard(0 8px 10px -5px rgba(0, 0, 0, 0.2),-50px 15px 0 3px,6px,#FDD835,15px);
+
+}
+
+.card-content{
+  width: 80%;
+  margin: auto;
+}
+
+.cardSettings{
+  @include mixinCard(0 25px 30px -13px rgba(40, 40, 40, 0.4),50px auto,6px,white,25px);
+  width: 100%;
+  color: #444;
+  min-height:400px;
+}
+
+
+.title{
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+  font-weight: 300 !important;
+  line-height: 1.5em;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+/*.md2-datepicker {
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+  outline: 0;
+  backface-visibility: hidden;
+}*/
+
+.mdSelectSettings{
+  width: 100%;
+}
+
+.md2-select-header {
+  position: relative;
+  display: block;
+  height: 48px;
+  padding-left: 10px;
+  border-bottom: 1px solid rgba(black, 0.12);
+
+  input {
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.customButtonSettings{
+  text-align: center;
+  width:80%;
+  margin: auto;
+}
+
+.customButton{
+  width: $custom-button-width;
+  border: none;
+  border-radius: $custom-button-radius !important;
+  margin-top: $custom-button-margin-top;
+  background-color: $chart-header-color;
+  color: $nav-bar-text-color;
+  height: 50px;
+}
+
+.md2-input {
+  max-width: 100%;
+  margin: 8px 0;
+  line-height: 26px;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  background: transparent;
+}
+
+.dashboard {
+  width: 100%;
+  overflow: hidden;
+  background: #E0E0E0;
+  min-height: 700px !important;
+}
+
+.dashboard /deep/ .widget {
+  background-color: white;
+  border-radius: 2px;
+  background: rgba(255,255,255,0.87);
+  box-shadow: 1px 1px 1px #9E9E9E;
+  display: inline-block;
+  overflow: scroll;
+}
+
+.widget .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.handle {
+  cursor: move;
+  right:15px;
+  left:15px;
+}

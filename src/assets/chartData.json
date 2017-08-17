@@ -1,0 +1,31 @@
+[{
+
+  "data":[
+
+    {
+
+      "category":"High",
+
+      "value":40
+
+    },
+
+    {
+
+      "category":"Medium",
+
+      "value":30
+
+    },
+
+    {
+
+      "category":"Low",
+
+      "value":30
+
+    }
+
+  ]
+
+}]
